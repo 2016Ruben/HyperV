@@ -23,3 +23,51 @@ The test cases for HyperV.
 
 The scripts for creating the testing environment.
 
+## This repository has been updated to provide a more stable framework of HyperVDP. There is also more clarification added
+
+### Makefile
+
+1. Fill in the path to the targets folder of Bmv2.
+
+### [tools](/tools)
+
+1. First compile the code from the main folder.
+	`sudo make compile`
+
+2. Then start the switch from the main folder.
+	`sudo make run`
+
+3. There are duplicate actions in the compiled JSON file in the /build folder. These need to be removed first. Look at the added reference file in the main folder.
+
+3. After switch setup cd into the /tools folder. Setup the match action tables.
+	`./setup`
+
+4. To populate the match action table of the switch.
+	`./populate /Relative_path_to_folder_of_the_desired_test_case`
+
+5. To clean up.
+	`./clean`
+
+### Tests
+In the test folder the following command files are updated:
+
+hyperv/firewall is error free.
+
+hyperv/l2_switch is error free.
+
+The only error to resolve for hyperv/router:
+	`RuntimeCmd: Error: Table table_std_meta_match_stage1 needs 5 key fields`
+
+The only error to resolve for hyperv/router:
+	`RuntimeCmd: Error: Table table_std_meta_match_stage4 needs 5 key fields`
+
+Duplicate errors have also been removed from hyperv/router/conf.json
+
+
+## Custom topology
+
+There is a topology file provided that can be used as an example.
+
+
+
+

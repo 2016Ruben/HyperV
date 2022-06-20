@@ -1,4 +1,4 @@
-BMv2_DIR=/home/netarchlab/behavioral-model/targets/simple_switch
+BMv2_DIR=PATH_TO/behavioral-model/targets/simple_switch
 MAIN_FILE=hyperv.p4
 COMMIT_REASON=?"defaut commit"
 LOG="--log-console"
